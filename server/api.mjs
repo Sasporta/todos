@@ -25,6 +25,6 @@ app.use('*', not_found);
 //start the express api server
 (async ()=> {
   await connect_db(DB_URI);
-  await app.listen(PORT,HOST);
+  await app.listen(PORT);
   log.magenta(`api is live on`,` ✨ ⚡  http://${HOST}:${PORT} ✨ ⚡`);  
 })().catch(log.error)
